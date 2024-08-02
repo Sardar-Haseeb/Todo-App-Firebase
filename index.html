@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/firebaseConfig.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body onload="checkAuth(); loadTodos();">
+    <header>
+        <nav>
+            <div class="logo">Todo App</div>
+            <div class="nav-links">
+                <a href="./profile.html">Profile</a>
+                <button onclick="signout()">Sign Out</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Welcome to Your Todo List</h1>
+            <input type="text" id="todoinput" placeholder="Add a new todo">
+            <button onclick="addtodo()">Add Todo</button>
+            <ul id="todoParent"></ul>
+        </div>
+    </main>
+</body>
+</html>

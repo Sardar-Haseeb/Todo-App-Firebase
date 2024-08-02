@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/firebaseConfig.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/profile.js"></script>
+</head>
+
+<body onload="checkAuth(); loadUserProfile();">
+    <header>
+        <nav>
+            <div class="logo">Todo App</div>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+
+                <button onclick="signout()">Sign Out</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>User Profile</h1>
+            <div class="profile">
+                <img id="profilePic" src="" alt="Profile Picture" width="300" height="300">
+                <input type="file" id="profilePicInput" accept="image/*" style="display: none;"
+                    onchange="uploadProfilePic()">
+                <button onclick="document.getElementById('profilePicInput').click()">Change Picture</button>
+
+                <!-- Display Mode -->
+                <div id="viewMode">
+                    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                    <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+                    <p><strong>First Name:</strong> <span id="profileFirstName"></span></p>
+                    <p><strong>Last Name:</strong> <span id="profileLastName"></span></p>
+                    <p><strong>Date of Birth:</strong> <span id="profileDOB"></span></p>
+                    <p><strong>Gender:</strong> <span id="profileGender"></span></p>
+                    <p><strong>Phone Number:</strong> <span id="profilePhoneNumber"></span></p>
+                </div>
+                <button onclick="editProfile()">Edit Your Info</button>
+
+                <!-- Edit Mode -->
+                <div id="editMode" style="display: none;">
+                    <form id="profileUpdateForm">
+                        <input type="text" id="updateUsername" placeholder="Username">
+                        <input type="text" id="updateFirstName" placeholder="First Name">
+                        <input type="text" id="updateLastName" placeholder="Last Name">
+                        <input type="date" id="updateDOB" placeholder="Date of Birth">
+                        <select id="updateGender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="tel" id="updatePhoneNumber" placeholder="Phone Number">
+                        <button type="button" onclick="updateUserProfile()">Save</button>
+                        <button type="button" onclick="cancelEdit()">Cancel</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1F1F1F;
+    padding: 20px;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .nav-links a,
+header .nav-links button {
+    color: #121212;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+    background-color: #76FF03;
+}
+
+header .nav-links button:hover,
+header .nav-links a:hover {
+    color: #76FF03;
+    background-color: #121212;
+    border: 1px solid;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    color: #76FF03;
+    margin-bottom: 20px;
+}
+
+.container a{
+    color: #76FF03;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2C2C2C;
+    color: #FFF;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #76FF03;
+    color: #121212;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #121212;
+    color: #76FF03;
+    border: 1px solid #76FF03;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #252525;
+    border-radius: 4px;
+    color: #FFF;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group button {
+    background-color: #76FF03;
+    padding: 5px 10px;
+}
+
+.button-group button:hover {
+    background-color: #121212;
+    border: 1px solid #76FF03;
+}
+
+/* Login and Signup Styles */
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.auth-container h1 {
+    color: #76FF03;
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2C2C2C;
+    color: #FFF;
+    font-size: 1em;
+}
+
+.auth-container button {
+    width: 80%;
+    padding: 10px 0;
+    margin: 20px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #76FF03;
+    color: #121212;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.auth-container button:hover {
+    background-color: #121212;
+    border: 1px solid #76FF03;
+    color: #76FF03;
+}
+
+.auth-container .toggle-link {
+    color: #76FF03;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.auth-container .toggle-link:hover {
+    color: #E0E0E0;
+}
+
+.auth-container a{
+    color: #76FF03;
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img{
+    border-radius: 1000px;
+}
+
+
+
+#dob, #gender, #phoneNumber, #updateDOB, #updateGender, #updatePhoneNumber {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2C2C2C;
+    color: #FFF;
+    font-size: 1em;
+}
+
+#viewMode{
+     text-align: start;
+}
+
+#viewMode p{
+    border: 1px solid #555;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #333;
+}
